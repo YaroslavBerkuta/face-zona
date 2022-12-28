@@ -37,9 +37,9 @@ services:
       - postgres
       - redis
     volumes:
-#       - type: volume
-#         source: server_volume
-#         target: /home/node/app
+      - type: volume
+        source: server_volume
+        target: /home/node/app
       - type: bind
         source: ./server
         target: /home/node/app
