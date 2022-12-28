@@ -26,7 +26,7 @@ async function bootstrap() {
     basicAuth({
       challenge: true,
       users: {
-        admin: "admin",
+        admin: "123admin",
       },
     })
   );
