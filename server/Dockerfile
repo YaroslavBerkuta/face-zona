@@ -22,7 +22,7 @@ RUN cd /home/node/app && ls
 WORKDIR /home/node/app
 COPY . /home/node/app
 
-CMD ["npm", "start"]
+# CMD ["npm", "start"]
 # Install development packages if NODE_ENV is set to "development"
 # ARG NODE_ENV
 # ENV NODE_ENV $NODE_ENV
