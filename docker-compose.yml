@@ -1,16 +1,16 @@
 version: "3"
 services:
-  nginx:
-    restart: always
-    build:
-      dockerfile: Dockerfile
-      context: ./nginx
-    ports:
-      - "1337:80"
-      - "3001:81"
-    depends_on:
-      - server
-      - client
+#   nginx:
+#     restart: always
+#     build:
+#       dockerfile: Dockerfile
+#       context: ./nginx
+#     ports:
+#       - "1337:80"
+#       - "3001:81"
+#     depends_on:
+#       - server
+#       - client
   client:
     build:
       dockerfile: Dockerfile
@@ -22,28 +22,28 @@ services:
       - type: bind
         source: ./client
         target: /app
-  server:
-    build:
-      dockerfile: Dockerfile
-      context: ./server
-    expose:
-      - 5000
-    ports:
-      - 5000:5000
-    depends_on:
-      - postgres
-      - redis
-    links:
-      - postgres
-      - redis
-    volumes:
-      - type: volume
-        source: server_volume
-        target: ./:/home/node/app
-      - type: bind
-        source: ./server
-        target: /home/node/app
-    command: npm run start
+#   server:
+#     build:
+#       dockerfile: Dockerfile
+#       context: ./server
+#     expose:
+#       - 5000
+#     ports:
+#       - 5000:5000
+#     depends_on:
+#       - postgres
+#       - redis
+#     links:
+#       - postgres
+#       - redis
+#     volumes:
+#       - type: volume
+#         source: server_volume
+#         target: ./:/home/node/app
+#       - type: bind
+#         source: ./server
+#         target: /home/node/app
+#     command: npm run start
 
   postgres:
         image: postgres:11
@@ -64,5 +64,5 @@ services:
             - '6379:6379'
 
 volumes:
-  server_volume:
+#   server_volume:
   client_volume:
