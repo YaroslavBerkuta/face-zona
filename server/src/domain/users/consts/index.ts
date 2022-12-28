@@ -1,0 +1,6 @@
+export const USERS_REPOSITORY = Symbol("USERS_REPOSITORY");
+
+export const PASSWORD_HASH_SALT = Symbol("PASSWORD_HAS_SALT");
+
+export const USERS_SERVICE = Symbol("USER_SERVICE");
+export const USERS_PASSWORD_SERVICE = Symbol("USER_PASSWORD_SERVICE");
