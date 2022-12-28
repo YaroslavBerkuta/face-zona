@@ -40,9 +40,9 @@ services:
       - type: volume
         source: server_volume
         target: /home/node/app
-      - type: bind
-        source: ./server
-        target: /home/node/app
+#       - type: bind
+#         source: ./server
+#         target: /home/node/app
     command: npm run start
 
   postgres:
