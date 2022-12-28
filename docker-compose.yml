@@ -43,7 +43,7 @@ services:
       - type: bind
         source: ./server
         target: /home/node/app
-#     command: npm run start
+    command: npm run start
 
   postgres:
         image: postgres:11
