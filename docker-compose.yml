@@ -22,6 +22,7 @@ services:
       - type: bind
         source: ./client
         target: /app
+    command: npm run start
   server:
     build:
       dockerfile: Dockerfile
@@ -40,18 +41,16 @@ services:
       - type: volume
         source: server_volume
         target: /home/node/app
-#       - type: bind
-#         source: ./server
-#         target: home/node/app
+      # - type: bind
+      #   source: ./server
+      #   target: /home/node/app
     command: npm run start
 
   postgres:
         image: postgres:11
         restart: always
-
         ports:
             - 3303:5432
-
         environment:
             POSTGRES_PASSWORD: ${DATABASE_PASS}
             POSTGRES_USER: ${DATABASE_USER}
