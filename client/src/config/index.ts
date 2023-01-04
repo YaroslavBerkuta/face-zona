@@ -3,16 +3,9 @@ interface IConfig {
 }
 
 const config: IConfig = {
-  API_URL: "http://185.69.154.136:5800",
-  // API_URL: "http://localhost:3000/",
+  // API_URL: "http://185.69.154.136:5800",
+  API_URL: "http://localhost:5000/",
 };
 
-if (process.env.NODE_ENV === "production") {
-  config.API_URL = "http://185.69.154.136:5800";
-}
-
-if (process.env.NODE_ENV === "stage") {
-  config.API_URL = "http://185.69.154.136:5800";
-}
 
 export default config;

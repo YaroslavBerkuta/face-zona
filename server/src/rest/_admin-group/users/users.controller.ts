@@ -29,7 +29,7 @@ export class RestUsersController {
     description: "Return users list",
     type: GetUsersListResponseDto,
   })
-  @RoleGuard(UserRole.Admin, UserRole.Manager)
+  // @RoleGuard(UserRole.Admin, UserRole.Manager)
   @Get()
   public getList(@ReqPagination() pagination: IPagination) {
     return this.restUsersService.getList(pagination);

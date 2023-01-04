@@ -67,6 +67,7 @@
     "rxjs": "^6.6.6",
     "sass": "^1.57.1",
     "search-array": "^1.6.0",
+    "serve": "^14.1.2",
     "sort-array": "^4.1.4",
     "style-loader": "^1.1.3",
     "stylus": "^0.54.7",
