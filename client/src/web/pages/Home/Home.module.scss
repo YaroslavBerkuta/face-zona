@@ -1,0 +1,30 @@
+.hero {
+  position: relative;
+}
+.heroDescription {
+  position: absolute;
+  top: 30%;
+  right: 0;
+  transform: translate(-30%, 0);
+  max-width: 700px;
+  h1 {
+    font-weight: 500;
+    font-size: 52px;
+    line-height: 63px;
+    color: #ffffff;
+    span {
+      color: #d08f8a;
+    }
+  }
+  p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: #ffffff;
+    max-width: 490px;
+    margin-top: 16px;
+    span {
+      color: #d08f8a;
+    }
+  }
+}

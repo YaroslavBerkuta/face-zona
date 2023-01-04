@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700&display=swap");
+@import url("https://fonts.cdnfonts.com/css/adventure");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1360px - 80px;
+  padding: 0 12px;
+}
+.btn {
+  border: 1px solid #d08f8a;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: #d08f8a;
+  cursor: pointer;
+}

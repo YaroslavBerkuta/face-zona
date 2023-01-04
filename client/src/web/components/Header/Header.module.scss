@@ -1,0 +1,27 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 999;
+}
+.headerFlex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  margin-right: 32px;
+  li {
+    &:not(:last-child) {
+      margin-right: 34px;
+    }
+    a {
+      font-size: 14px;
+      color: #ffffff;
+    }
+  }
+}
