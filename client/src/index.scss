@@ -17,6 +17,7 @@ img {
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
+  background: #f8f8f8;
 }
 
 button {
@@ -36,4 +37,19 @@ button {
   padding-bottom: 15px;
   color: #d08f8a;
   cursor: pointer;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+.btn-fill {
+  background-color: #d08f8a;
+  color: white;
+}
+.section__title {
+  h2 {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 34px;
+    text-align: center;
+    color: #333333;
+  }
 }
