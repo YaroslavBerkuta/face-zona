@@ -3,12 +3,7 @@ import { ApiBody, ApiOkResponse, ApiOperation, ApiTags } from "@nestjs/swagger";
 import { SessionDto } from "src/domain/sessions/typing";
 import { SignUpPayloadDto } from "./dtos/sign-up-payload.dto";
 import { RestAuthService } from "./auth.service";
-import {
-  ConfirmEmailDto,
-  RefreshSessionPayloadDto,
-  ResendCodeDto,
-  SignInPayloadDto,
-} from "./dtos";
+import { RefreshSessionPayloadDto,  SignInPayloadDto } from "./dtos";
 
 @ApiTags("Auth")
 @Controller("auth")

@@ -6,7 +6,7 @@ export class SignUpPayloadDto {
   username: string;
 
   @DtoProperty()
-  usersurname;
+  usersurname: string;
 
   @DtoProperty()
   @IsEmail()

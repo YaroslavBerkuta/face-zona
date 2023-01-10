@@ -54,7 +54,6 @@ export class RestAuthService {
       userId: user.id,
       role: user.role,
     });
-
     return session;
   }
 
