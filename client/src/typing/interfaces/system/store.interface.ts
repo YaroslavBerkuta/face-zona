@@ -8,8 +8,8 @@ export namespace Store {
     isLoading: boolean;
   };
   export interface IAuthState {
-    accessToken: string;
-    refreshToken: string;
+    accessToken: string | null;
+    refreshToken: string | null;
   }
   export interface INewEmployer {
     count: string;
