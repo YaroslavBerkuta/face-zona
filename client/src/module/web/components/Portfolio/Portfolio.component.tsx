@@ -2,10 +2,10 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Navigation } from "swiper";
 import style from "./Portfolio.module.scss";
-import oksanaFull from "../../../assets/img/oksanaFull.png";
-import videoPoster from "../../../assets/img/videoPoster.png";
-import logoGold from "../../../assets/img/logoGold.svg";
-import diplom from "../../../assets/img/diplom.jpg";
+import oksanaFull from "../../../../assets/img/oksanaFull.png";
+import videoPoster from "../../../../assets/img/videoPoster.png";
+import logoGold from "../../../../assets/img/logoGold.svg";
+import diplom from "../../../../assets/img/diplom.jpg";
 import "swiper/css/bundle";
 export const Portfolio = () => {
   return (

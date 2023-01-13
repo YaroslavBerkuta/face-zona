@@ -24,5 +24,7 @@ export namespace Store {
       info: StoreData<IUserAccount>;
     }
   }
-  export interface Root {}
+  export interface Root {
+    auth: IAuthState;
+  }
 }

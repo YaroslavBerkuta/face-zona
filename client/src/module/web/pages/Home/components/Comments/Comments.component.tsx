@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
-import oksana from "../../../../../assets/img/oksana.png";
+import oksana from "../../../../../../assets/img/oksana.png";
 import style from "./Commets.module.scss";
 export const Comments = () => {
   const navigationPrevRef = useRef(null);

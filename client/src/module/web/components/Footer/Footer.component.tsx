@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./Footer.module.scss";
-import logoWhiter from "../../../assets/img/logoWhite.svg";
+import logoWhiter from "../../../../assets/img/logoWhite.svg";
 import { Link } from "react-router-dom";
 export const Footer = () => {
   return (

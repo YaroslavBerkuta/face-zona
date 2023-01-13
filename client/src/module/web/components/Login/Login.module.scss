@@ -1,0 +1,87 @@
+.wrapper {
+  z-index: 999;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 32px;
+}
+.wrapperAuth {
+  max-width: 470px;
+  width: 100%;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  .switch {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #333333;
+    margin-top: 24px;
+  }
+  h4 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 34px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 32px;
+  }
+}
+.inputWrapper {
+  width: 100%;
+  margin-bottom: 32px;
+  span {
+    color: rgba(255, 0, 0, 0.466);
+    font-size: 12px;
+  }
+  label {
+    margin-bottom: 16px;
+    display: inline-block;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #333333;
+    span {
+      color: #d08f8a;
+    }
+  }
+}
+.input {
+  width: 100%;
+  border: 1px solid rgba(51, 51, 51, 0.24);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 44px;
+  input {
+    font-size: 14px;
+    flex: 1;
+  }
+}
+
+.wrapperSingUp {
+  max-width: 900px;
+  width: 100%;
+}
+
+.signUp {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .inputWrapper {
+    max-width: 48%;
+  }
+}

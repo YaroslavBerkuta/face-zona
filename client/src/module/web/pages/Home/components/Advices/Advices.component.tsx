@@ -1,5 +1,5 @@
 import React from "react";
-import advice from "../../../../../assets/img/advice.png";
+import advice from "../../../../../../assets/img/advice.png";
 import style from "./Advices.module.scss";
 export const Advices = () => {
   return (

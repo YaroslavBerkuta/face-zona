@@ -1,14 +1,13 @@
 import React, { useEffect } from "react";
 import { Header } from "../../components/Header/Header.component";
 import { Layout } from "../../components/Layout/Layout.component";
-import baner from "../../../assets/img/main.png";
+import baner from "../../../../assets/img/main.png";
 import style from "./Home.module.scss";
 import { Advices } from "./components/Advices/Advices.component";
-import oksana from "../../../assets/img/oksana.png";
+import oksana from "../../../../assets/img/oksana.png";
 import { HowWork } from "./components/HowWork/how-work.component";
 import { Portfolio } from "../../components/Portfolio/Portfolio.component";
 import { Comments } from "./components/Comments/Comments.component";
-import { signIn } from "../../../services/domain/auth.service";
 
 export const Home = () => {
   return (

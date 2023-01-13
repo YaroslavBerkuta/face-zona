@@ -55,6 +55,7 @@
     "react-dom": "^18.2.0",
     "react-draft-wysiwyg": "^1.15.0",
     "react-google-autocomplete": "^2.7.0",
+    "react-hook-form": "^7.41.5",
     "react-i18next": "^11.16.9",
     "react-icons": "^4.7.1",
     "react-input-mask": "^2.0.4",
