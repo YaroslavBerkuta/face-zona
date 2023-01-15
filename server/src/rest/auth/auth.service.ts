@@ -26,6 +26,7 @@ export class RestAuthService {
       password: dto.password,
       username: dto.username,
       usersurname: dto.usersurname,
+      phoneNumber: dto.phoneNumber,
       role: UserRole.Client,
     });
     const session = await this.sessionsService.start({

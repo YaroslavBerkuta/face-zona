@@ -1,4 +1,5 @@
 import { DatabaseModule } from "src/libs/database";
+import { IFilesStorageOptions } from "src/libs/file-storage/interfaces";
 import { IMailerModuleOptions } from "src/libs/mailer/interfaces";
 import { IRedisModuleOptions } from "src/libs/redis/interfaces";
 import { getEnv, stringToBoolean } from "src/shared";
@@ -30,6 +31,18 @@ export const getRedisConfig = (): IRedisModuleOptions => {
     port: Number(getEnv("REDIS_PORT")),
     host: getEnv("REDIS_HOST"),
     password: getEnv("REDIS_PASS"),
+  };
+};
+
+export const getFilesStorageConfig = (): IFilesStorageOptions => {
+  return {
+    host: getEnv("MINIO_HOST"),
+    port: Number(getEnv("MINIO_PORT")),
+    accessKey: getEnv("MINIO_ACCESS_KEY"),
+    secretKey: getEnv("MINIO_SECRET_KEY"),
+    urlPrefix: getEnv("MINIO_URL_PREFIX"),
+    bucket: getEnv("MINIO_BUCKET") || "files",
+    privateBucket: getEnv("MINIO_PRIVATE_BUCKET"),
   };
 };
 

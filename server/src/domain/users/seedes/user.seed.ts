@@ -19,6 +19,7 @@ export class UsersSeed extends Seeder {
       email: "admin@admin.com",
       password: "123qqq",
       role: UserRole.Admin,
+      phoneNumber:"+380984288233"
     });
   }
 }

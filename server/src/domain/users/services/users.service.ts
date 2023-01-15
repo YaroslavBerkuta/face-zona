@@ -39,6 +39,7 @@ export class UsersService implements IUsersService {
       usersurname: payload.usersurname,
       fullName: `${payload.username} ${payload.usersurname}`,
       email: payload.email,
+      phoneNumber: payload.phoneNumber,
       password: payload.password,
       passwordSalt: passwordSalt,
       role: UserRole.Client,

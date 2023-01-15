@@ -14,4 +14,7 @@ export class SignUpPayloadDto {
 
   @DtoProperty()
   password: string;
+
+  @DtoProperty()
+  phoneNumber: string;
 }

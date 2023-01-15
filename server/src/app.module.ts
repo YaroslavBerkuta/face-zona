@@ -2,6 +2,7 @@ import { Module } from "@nestjs/common";
 
 import {
   getDatabaseConfig,
+  getFilesStorageConfig,
   getJwtConfig,
   getMailerConfig,
   getRedisConfig,
@@ -14,6 +15,7 @@ import { REST_MODULES } from "./rest";
 import { RedisModule } from "./libs/redis";
 import { EventEmitterModule } from "@nestjs/event-emitter";
 import { MailerModule } from "./libs/mailer/mailer.module";
+import { FilesStorageModule } from "./libs/file-storage/files-storage.module";
 @Module({
   imports: [
     CommandModule,
@@ -22,6 +24,7 @@ import { MailerModule } from "./libs/mailer/mailer.module";
     DatabaseModule.forRoot(...getDatabaseConfig()),
     RedisModule.forRoot(getRedisConfig()),
     MailerModule.forRoot(getMailerConfig()),
+    FilesStorageModule.forRoot(getFilesStorageConfig()),
     ...DOMAIN_MODULES(),
     ...REST_MODULES(),
   ],

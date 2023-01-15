@@ -5,6 +5,7 @@ import { IUser } from "./user.interface";
 export interface IUserStorePayload {
   username: string;
   usersurname: string;
+  phoneNumber: string;
   email: string;
   fullName?: string;
   password: string;
