@@ -1,10 +1,12 @@
 import { signInReq, signUpReq } from "../../api";
 import { ISignInPayload, ISignUpPayload } from "../../api/auth/auth.interface";
+import { Reset, SetAccountLoading } from "../../store/account/types";
 import { SaveTokens } from "../../store/auth";
 import { simpleDispatch } from "../../store/store-helpers";
 import { StorageKey } from "../../typing/enums";
 import { TokensPair } from "../../typing/interfaces";
 import { storageService } from "../system";
+import { accountService } from "./account.service";
 
 export const signIn = async (payload: ISignInPayload) => {
   try {
@@ -41,10 +43,12 @@ const saveSession = async (tokens: TokensPair) => {
     await storageService.set(StorageKey.AccessToken, tokens.accessToken);
     await storageService.set(StorageKey.RefreshToken, tokens.refreshToken);
     simpleDispatch(new SaveTokens(tokens));
+    await accountService.load();
   } catch (e) {
     logOut();
   }
 };
+
 const removeTokens = async () => {
   await storageService.remove(StorageKey.AccessToken);
   await storageService.remove(StorageKey.RefreshToken);
@@ -52,5 +56,7 @@ const removeTokens = async () => {
 
 export const logOut = async () => {
   removeTokens();
+  simpleDispatch(new Reset());
+  simpleDispatch(new SetAccountLoading(false));
   location.pathname = "/";
 };

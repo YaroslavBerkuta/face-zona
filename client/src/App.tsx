@@ -3,11 +3,7 @@ import "./App.scss";
 import { Web } from "./module/web";
 
 function App() {
-  return (
-    <>
-      <Web />
-    </>
-  );
+  return <Web />;
 }
 
 export default App;

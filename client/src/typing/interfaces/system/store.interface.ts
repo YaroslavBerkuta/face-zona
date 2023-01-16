@@ -26,5 +26,6 @@ export namespace Store {
   }
   export interface Root {
     auth: IAuthState;
+    account: States.Account;
   }
 }

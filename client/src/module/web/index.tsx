@@ -1,13 +1,23 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Account } from "./pages/Account/Account.page";
+import { Blog } from "./pages/Blog/Blog.page";
 import { Home } from "./pages/Home/Home.page";
 
 export const Web = () => {
   return (
-    <Switch>
-      <Route path="/">
-        <Home />
-      </Route>
-    </Switch>
+    <Router>
+      <Switch>
+        <Route path="/blog">
+          <Blog />
+        </Route>
+        <Route path="/account">
+          <Account />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
   );
 };

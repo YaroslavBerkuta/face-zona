@@ -1,9 +1,32 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useHistory } from "react-router-dom";
 import style from "./Header.module.scss";
 import logoWhite from "../../../../assets/img/logoWhite.svg";
+import logoBlack from "../../../../assets/img/logoBlack.svg";
 import { Login } from "../Login/Login.component";
-export const Header = () => {
+import { selectAccount } from "../../../../store/account/selectors";
+import { useSelector } from "react-redux";
+import { isEmpty } from "lodash";
+import { appService } from "../../../../services/domain/app.service";
+interface IProps {
+  mode?: "white" | "black";
+}
+export const Header = ({ mode = "white" }) => {
+  const history = useHistory();
+  useEffect(() => {
+    appService.load();
+  }, []);
+  const [login, setLogin] = useState(false);
+  const account = useSelector(selectAccount);
+  const cheackAuth = () => {
+    if (isEmpty(account.data)) {
+      setLogin(true);
+    } else {
+      history.push({
+        pathname: "/account",
+      });
+    }
+  };
   return (
     <>
       <header className={style.header}>
@@ -17,11 +40,19 @@ export const Header = () => {
           <div className={style.headerFlex}>
             <div>
               <Link to="/">
-                <img src={logoWhite} alt="logo" />
+                {mode == "black" ? (
+                  <img src={logoBlack} alt="logo" />
+                ) : (
+                  <img src={logoWhite} alt="logo" />
+                )}
               </Link>
             </div>
             <div style={{ display: "flex", alignItems: "center" }}>
-              <ul className={style.menu}>
+              <ul
+                className={`${style.menu} ${
+                  mode == "black" && style.menuBlack
+                }`}
+              >
                 <li>
                   <Link to="/">Підбір косметики</Link>
                 </li>
@@ -35,10 +66,10 @@ export const Header = () => {
                   <Link to="/">Для лікарів</Link>
                 </li>
                 <li>
-                  <Link to="/">Блог</Link>
+                  <Link to="/blog">Блог</Link>
                 </li>
                 <li>
-                  <Link to="/">Мій кабінет</Link>
+                  <p onClick={() => cheackAuth()}>Мій кабінет</p>
                 </li>
               </ul>
               <button
@@ -51,7 +82,7 @@ export const Header = () => {
           </div>
         </div>
       </header>
-      <Login />
+      {login && <Login view={setLogin} />}
     </>
   );
 };

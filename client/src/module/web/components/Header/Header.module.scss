@@ -16,12 +16,58 @@
   align-items: center;
   margin-right: 32px;
   li {
+    p {
+      color: white;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.3s linear;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        bottom: -10px;
+        left: 0;
+        height: 1px;
+        background-color: #d08f8a;
+      }
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
     &:not(:last-child) {
       margin-right: 34px;
     }
     a {
       font-size: 14px;
       color: #ffffff;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        bottom: -10px;
+        left: 0;
+        height: 1px;
+        background-color: #d08f8a;
+        transition: all 0.3s linear;
+      }
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+.menuBlack {
+  li {
+    p {
+      color: #333333;
+    }
+    a {
+      color: #333333;
     }
   }
 }
