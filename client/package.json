@@ -28,6 +28,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@googlemaps/js-api-loader": "^1.14.3",
+    "@supercharge/strings": "^2.0.0",
     "@types/draftjs-to-html": "^0.8.1",
     "@types/googlemaps": "^3.43.3",
     "@types/node-sass": "^4.11.3",

@@ -11,7 +11,7 @@ export class AppService extends Service {
 
       await accountService.load();
     } catch (e) {
-      if (location.pathname !== "/") location.pathname = "/";
+      if (location.pathname == "/account") location.pathname = "/";
       this.dispatch(new SetAccountLoading(false));
     }
   }

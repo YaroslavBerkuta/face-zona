@@ -7,15 +7,11 @@ import { Login } from "../Login/Login.component";
 import { selectAccount } from "../../../../store/account/selectors";
 import { useSelector } from "react-redux";
 import { isEmpty } from "lodash";
-import { appService } from "../../../../services/domain/app.service";
 interface IProps {
   mode?: "white" | "black";
 }
 export const Header = ({ mode = "white" }) => {
   const history = useHistory();
-  useEffect(() => {
-    appService.load();
-  }, []);
   const [login, setLogin] = useState(false);
   const account = useSelector(selectAccount);
   const cheackAuth = () => {
