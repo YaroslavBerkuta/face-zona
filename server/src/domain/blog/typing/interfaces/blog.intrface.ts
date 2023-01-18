@@ -5,7 +5,9 @@ export interface IBlog {
   coverImg: string;
   categoryId: number;
   title: string;
+  shortDescription: string;
   content: string;
+  view?: number;
   category?: IBlogCategory;
   createdAt?: string;
   updatedAt?: string;

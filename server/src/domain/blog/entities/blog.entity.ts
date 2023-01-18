@@ -20,10 +20,16 @@ export class Blog implements IBlog {
   coverImg: string;
 
   @Column()
+  view: number;
+
+  @Column()
   categoryId: number;
 
   @Column()
   title: string;
+
+  @Column()
+  shortDescription: string;
 
   @Column()
   content: string;
