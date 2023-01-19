@@ -16,6 +16,8 @@ import { RedisModule } from "./libs/redis";
 import { EventEmitterModule } from "@nestjs/event-emitter";
 import { MailerModule } from "./libs/mailer/mailer.module";
 import { FilesStorageModule } from "./libs/file-storage/files-storage.module";
+import { SmsModule } from "./libs/sms/sms.module";
+import { getEnv, stringToBoolean } from "./shared";
 @Module({
   imports: [
     CommandModule,
@@ -25,6 +27,7 @@ import { FilesStorageModule } from "./libs/file-storage/files-storage.module";
     RedisModule.forRoot(getRedisConfig()),
     MailerModule.forRoot(getMailerConfig()),
     FilesStorageModule.forRoot(getFilesStorageConfig()),
+    SmsModule.forRoot({ test: stringToBoolean(getEnv("SMS_TEST_MODE")) }),
     ...DOMAIN_MODULES(),
     ...REST_MODULES(),
   ],
